@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+
+    <ConstraintSet android:id="@+id/start" >
+        <Constraint
+            android:id="@+id/textView"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent">
+        </Constraint>
+        <Constraint
+            android:id="@+id/imageView"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            motion:layout_constraintTop_toBottomOf="@id/textView"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="50dp" />
+        <Constraint
+            android:id="@+id/maleImageView"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:visibility="gone"
+            motion:layout_constraintTop_toBottomOf="@id/textView"
+            motion:layout_constraintHorizontal_bias="0.1"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="50dp" />
+        <Constraint
+            android:id="@+id/maleIconImageView"
+            motion:layout_constraintEnd_toEndOf="@id/maleImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            motion:layout_constraintTop_toBottomOf="@id/maleImageView"
+            motion:layout_constraintStart_toStartOf="@id/maleImageView"
+            android:layout_marginTop="10dp" />
+        <Constraint
+            android:id="@+id/femaleImageView"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:visibility="gone"
+            motion:layout_constraintTop_toBottomOf="@id/textView"
+            motion:layout_constraintHorizontal_bias="0.9"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="50dp" />
+        <Constraint
+            android:id="@+id/femaleIconImageView"
+            motion:layout_constraintEnd_toEndOf="@id/femaleImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            motion:layout_constraintTop_toBottomOf="@id/femaleImageView"
+            motion:layout_constraintStart_toStartOf="@id/femaleImageView"
+            android:layout_marginTop="10dp" />
+    </ConstraintSet>
+
+
+    <ConstraintSet android:id="@+id/end" >
+        <Constraint
+            android:id="@+id/textView"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/imageView"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:visibility="gone"
+            motion:layout_constraintTop_toBottomOf="@id/textView"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="50dp" />
+        <Constraint
+            android:id="@+id/maleImageView"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            motion:layout_constraintTop_toBottomOf="@id/textView"
+            motion:layout_constraintHorizontal_bias="0.1"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="50dp" />
+        <Constraint
+            android:id="@+id/maleIconImageView"
+            motion:layout_constraintEnd_toEndOf="@id/maleImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            motion:layout_constraintTop_toBottomOf="@id/maleImageView"
+            motion:layout_constraintStart_toStartOf="@id/maleImageView"
+            android:layout_marginTop="10dp" />
+        <Constraint
+            android:id="@+id/femaleImageView"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            motion:layout_constraintTop_toBottomOf="@id/textView"
+            motion:layout_constraintHorizontal_bias="0.9"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="50dp" />
+        <Constraint
+            android:id="@+id/femaleIconImageView"
+            motion:layout_constraintEnd_toEndOf="@id/femaleImageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            motion:layout_constraintTop_toBottomOf="@id/femaleImageView"
+            motion:layout_constraintStart_toStartOf="@id/femaleImageView"
+            android:layout_marginTop="10dp" />
+    </ConstraintSet>
+
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/end"
+        motion:autoTransition="animateToEnd"
+        motion:duration="1000">
+    </Transition>
+<!--    <Transition-->
+<!--        motion:constraintSetStart="@+id/end"-->
+<!--        motion:constraintSetEnd="@+id/start"-->
+<!--        motion:duration="1500">-->
+<!--    </Transition>-->
+
+
+</MotionScene>
